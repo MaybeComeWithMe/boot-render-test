@@ -1,0 +1,28 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        temp:
+          use_jdbc_metadata_defaults: false
+          database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    password: mysecretpassword
+    driver-class-name: org.postgresql.Driver
+person:
+  firstName: Pavel
+  lastName: Tkachov
+
+server:
+  port: 1111
+
